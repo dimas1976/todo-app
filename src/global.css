@@ -11,6 +11,20 @@
   --fc-text-primary: #393939;
   --fc-text-secondary: #111;
   --fc-content-passive: #d4d4d4;
+
+  /* -----Headlines----- */
+  --h1-fs: 2.93rem;
+  --h1-fw: 500;
+  --h2-fs: 2rem;
+  --h2-fw: 500;
+  --h3-fs: 1.25;
+  --h3-fw: 600;
+  --h4-fs: 0.93rem;
+  --h4-fw: 600;
+  --h5-fs: 0.8rem;
+  --h5-fw: 400;
+  --h6-fs: 0.8rem;
+  --h6-fw: 1rem;
 }
 
 *,
