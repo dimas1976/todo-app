@@ -4,8 +4,6 @@
   display: grid;
   grid-template-columns: 2.25rem 1fr;
   grid-template-rows: repeat(4, 1fr);
-  flex-direction: column;
-  justify-content: space-between;
   border: 2px solid red;
 }
 
@@ -16,8 +14,23 @@
   grid-column: 2;
 }
 
-.radio-container {
-  width: 70%;
+.form__fieldset {
   grid-row: 2 /3;
   grid-column: 2;
+}
+
+.fieldset {
+  border: 0;
+  padding-left: 0;
+}
+
+.fieldset__radio-items {
+  display: flex;
+  justify-content: space-around;
+  background-color: green;
+}
+
+.form__btn {
+  grid-row: 4;
+  grid-column: span 2;
 }
