@@ -1,5 +1,23 @@
 .form {
-  width: 40rem;
+  width: 31.25rem;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid red;
+}
+
+.form__form-control {
   display: flex;
   flex-direction: column;
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.radio-container {
+  width: 70%;
+  grid-row: 2 /3;
+  grid-column: 2;
 }
