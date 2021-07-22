@@ -6,4 +6,4 @@ export default {
   parameters: { layout: "centered" },
 };
 
-export const Headlines = () => typography;
+export const headlines = () => typography;
