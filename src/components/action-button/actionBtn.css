@@ -1,4 +1,4 @@
-.button-container {
+.button {
   width: 9.36rem;
   height: 8.08rem;
   background-color: var(--fc-primary);
@@ -9,4 +9,8 @@
   display: flex;
   justify-content: center;
   padding: 2rem 0;
+}
+
+.button__plus {
+  align-self: center;
 }
