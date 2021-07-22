@@ -1,9 +1,9 @@
 import "./actionBtn.css";
-import actionBtn from "./actionBtn.html";
+import actionBtn from "./button.html";
 
 export default {
   title: "Components/Action Button",
-  parameters: { layout: "" },
+  parameters: { layout: "fullscreen" },
 };
 
-export const headlines = () => actionBtn;
+export const buttons = () => actionBtn;
