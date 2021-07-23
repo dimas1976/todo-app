@@ -73,5 +73,5 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + span {
-  color: red;
+  color: rgb(254, 71, 117);
 }
