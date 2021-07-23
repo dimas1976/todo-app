@@ -8,7 +8,7 @@
 }
 .task-item__checkbox[type="checkbox"]:checked + .task-item__text {
   text-decoration: line-through;
-  text-decoration-color: rgb(254, 71, 117);
+  text-decoration-color: var(--fc-primary);
   text-decoration-thickness: 0.2rem;
 }
 

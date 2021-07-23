@@ -1,0 +1,12 @@
+.nav-item {
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-decoration: none;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+.nav-item--active {
+  color: var(--fc-primary);
+}
