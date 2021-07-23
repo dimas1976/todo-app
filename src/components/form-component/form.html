@@ -1,0 +1,24 @@
+<form class="form">
+  <div class="form__form-control">
+    <label for="task">Enter Task</label>
+    <input type="text" id="task" />
+  </div>
+  <fieldset class="form__fieldset fieldset">
+    <legend>WHEN</legend>
+    <div class="fieldset__radio-items fieldset__radio-items--bgcolor">
+      <label>
+        <input type="radio" value="today" name="when" checked />
+        <span>Today</span>
+      </label>
+      <label>
+        <input type="radio" value="tomorrow" name="when" />
+        <span>Tomorrow</span>
+      </label>
+      <label>
+        <input type="radio" value="selectDate" name="when" />
+        <span>Select Date</span>
+      </label>
+    </div>
+  </fieldset>
+  <button class="form__btn form__btn--red" type="submit">Add Task</button>
+</form>
