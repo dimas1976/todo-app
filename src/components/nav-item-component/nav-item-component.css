@@ -4,8 +4,8 @@
   color: rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   text-decoration: none;
-  transform-origin: 0 0;
-  transform: rotate(90deg);
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
 }
 .nav-item--active {
   color: var(--fc-primary);
