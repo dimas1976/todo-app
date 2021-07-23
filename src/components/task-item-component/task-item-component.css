@@ -1,0 +1,11 @@
+.task-item__label {
+  position: relative;
+}
+.task-item__checkbox[type="checkbox"]:checked + .task-item__text::before {
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background-color: rgba(254, 71, 117, 1);
+  position: absolute;
+  top: 0.5rem;
+}
