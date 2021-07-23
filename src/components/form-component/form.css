@@ -3,8 +3,10 @@
   height: 70vh;
   display: grid;
   grid-template-columns: 2.25rem 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 6rem;
   border: 2px solid red;
+  position: absolute;
+  top: 30%;
 }
 
 .form__form-control {
@@ -21,16 +23,24 @@
 
 .fieldset {
   border: 0;
-  padding-left: 0;
+  padding: 0;
 }
 
 .fieldset__radio-items {
   display: flex;
   justify-content: space-around;
-  background-color: green;
+  padding: 3rem 0;
+}
+
+.fieldset__radio-items--bgcolor {
+  background-color: rgba(212, 212, 212, 0.4);
 }
 
 .form__btn {
   grid-row: 4;
   grid-column: span 2;
+}
+
+.form__btn--red {
+  background-color: var(--fc-primary);
 }

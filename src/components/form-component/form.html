@@ -4,21 +4,21 @@
     <input type="text" id="task" />
   </div>
   <fieldset class="form__fieldset fieldset">
-    <legend>When</legend>
-    <div class="fieldset__radio-items">
-      <div>
-        <input id="today" type="radio" value="today" />
-        <label for="today">Today</label>
-      </div>
-      <div>
-        <input id="tomorrow" type="radio" value="tomorrow" />
-        <label for="tomorrow">Tomorrow</label>
-      </div>
-      <div>
-        <input id="selectDate" type="radio" value="selectDate" />
-        <label for="selectDate">Select Date</label>
-      </div>
+    <legend>WHEN</legend>
+    <div class="fieldset__radio-items fieldset__radio-items--bgcolor">
+      <label for="today"
+        >Today
+        <input id="today" type="radio" value="today" name="when" />
+      </label>
+      <label for="tomorrow"
+        >Tomorrow
+        <input id="tomorrow" type="radio" value="tomorrow" name="when" />
+      </label>
+      <label for="selectDate">
+        Select Date
+        <input id="selectDate" type="radio" value="selectDate" name="when" />
+      </label>
     </div>
   </fieldset>
-  <button class="form__btn" type="submit">Add Task</button>
+  <button class="form__btn form__btn--red" type="submit">Add Task</button>
 </form>
