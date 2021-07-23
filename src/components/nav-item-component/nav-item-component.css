@@ -6,6 +6,7 @@
   text-decoration: none;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
+  letter-spacing: 0.2rem;
 }
 .nav-item--active {
   color: var(--fc-primary);
