@@ -1,0 +1,77 @@
+.form {
+  width: 31.25rem;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  grid-template-rows: 1fr 1fr 1fr 6rem;
+}
+
+.form__form-control {
+  display: flex;
+  flex-direction: column;
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.form__form-control input {
+  border: none;
+  border-bottom: 0.15rem solid rgba(52, 45, 47, 0.4);
+  padding-top: 3rem;
+}
+
+.form__form-control input:focus {
+  outline: none;
+}
+
+.form__form-control label {
+  font-family: var(--ff-primary);
+  font-size: 2.92rem;
+  color: rgba(57, 57, 57, 0.4);
+}
+
+.form__fieldset {
+  grid-row: 2 /3;
+  grid-column: 2;
+}
+
+.form__fieldset legend {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-primary-medium);
+  font-size: 1.25rem;
+  color: black;
+  padding: 2rem 0;
+}
+
+.fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.fieldset__radio-items {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+}
+
+.fieldset__radio-items--bgcolor {
+  background-color: rgba(212, 212, 212, 0.2);
+}
+
+.form__btn {
+  grid-row: 4;
+  grid-column: span 2;
+  color: white;
+  font-size: 1.75rem;
+}
+
+.form__btn--red {
+  background-color: var(--fc-primary);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + span {
+  color: red;
+}
