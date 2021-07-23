@@ -1,0 +1,10 @@
+.add-task-container {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+}
+h1 {
+  grid-column: 2;
+}
+.form {
+  grid-column: span 2;
+}
