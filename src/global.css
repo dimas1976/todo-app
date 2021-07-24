@@ -2,7 +2,7 @@
 
 :root {
   --ff-primary: "Roboto", sans-serif;
-  --fw-primary-medium: 500;
+  --fw-primary-medium: 300;
   --fw-primary-bold: 900;
   --ff-secondary: "Montserrat", sans-serif;
   --fw-secondary-semi-bold: 400;
@@ -32,4 +32,10 @@ optgroup,
 textarea {
   margin: 0;
   font-family: var(--ff-primary);
+}
+
+ul,
+h1 {
+  margin: 0;
+  padding: 0;
 }
