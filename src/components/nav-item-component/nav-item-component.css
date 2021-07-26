@@ -1,4 +1,4 @@
-.nav-item {
+.link {
   font-family: var(--ff-primary);
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.2);
@@ -8,6 +8,6 @@
   transform: rotate(-180deg);
   letter-spacing: 0.2rem;
 }
-.nav-item--active {
+.link--active {
   color: var(--fc-primary);
 }

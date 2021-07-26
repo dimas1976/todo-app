@@ -1,14 +1,15 @@
 .button {
-  width: 9.36rem;
-  height: 8.08rem;
+  width: 7.36rem;
+  height: 6.08rem;
   background-color: var(--fc-primary);
   position: absolute;
-  left: calc(100% - 9.36rem);
-  top: calc(100% - 8.08rem);
+  left: calc(100% - 7.36rem);
+  top: calc(100% - 6.08rem);
   border-top-left-radius: 11px;
   display: flex;
   justify-content: center;
   padding: 2rem 0;
+  border: 0;
 }
 
 .button__plus {
