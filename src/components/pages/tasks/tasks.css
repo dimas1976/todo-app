@@ -41,7 +41,7 @@
 }
 
 .tasks {
-  padding-top: 4rem;
+  padding-top: 2rem;
   background-color: rgba(212, 212, 212, 0.2);
   grid-row: 3;
   grid-column: 3 / span 2;
