@@ -32,6 +32,28 @@ h1 {
   margin: 0;
   padding: 0;
 }
+h1 {
+  padding-left: 2.3rem;
+  font-size: 2.92rem;
+  font-weight: var(--fw-primary-medium);
+}
+
+h2 {
+  font-size: 2.67rem;
+  font-weight: var(--fw-primary-medium);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: var(--fw-primary-bold);
+}
+
+h4 {
+  font-family: var(--ff-secondary);
+  font-size: 1.25rem;
+  font-weight: var(--fw-secondary-semi-bold);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -134,4 +156,108 @@ body {
 
 .button__plus {
   align-self: center;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.form__form-control {
+  display: flex;
+  flex-direction: column;
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.form__form-control input {
+  border: none;
+  border-bottom: 0.15rem solid rgba(52, 45, 47, 0.4);
+  padding-top: 3rem;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.form__form-control input:focus {
+  outline: none;
+}
+
+.form__form-control input::placeholder {
+  font-size: 2.92rem;
+  color: rgba(57, 57, 57, 0.2);
+}
+
+.form__form-control label {
+  font-family: var(--ff-primary);
+  font-size: 2.92rem;
+  color: rgba(57, 57, 57, 0.4);
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.form__fieldset {
+  grid-row: 2 /3;
+  grid-column: 2;
+}
+
+.form__fieldset legend {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-primary-medium);
+  font-size: 1.25rem;
+  color: black;
+  padding: 2rem 0;
+}
+
+.fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.fieldset__radio-items {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+}
+
+.fieldset__radio-items--bgcolor {
+  background-color: rgba(212, 212, 212, 0.2);
+}
+
+.form__btn {
+  grid-row: 4;
+  grid-column: span 2;
+  color: white;
+  font-size: 1.75rem;
+  border: none;
+  height: 6rem;
+}
+
+.form__btn--red {
+  background-color: var(--fc-primary);
+}
+
+input[type="radio"] {
+  opacity: 0;
+  width: 1em;
+  height: 1em;
+}
+
+input[type="radio"]:checked + span {
+  color: rgb(254, 71, 117);
+}
+
+input [type="text"] {
+  font-size: 1rem;
+}
+
+.addTask-container {
+  height: 100%;
+  display: grid;
+  align-content: space-between;
 }
