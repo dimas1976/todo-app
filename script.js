@@ -8,7 +8,7 @@ function sendAlert() {
 const taskList = document.querySelector(".tasksList");
 const newTask = document.createElement("li");
 newTask.innerText = "Example task";
-taskList.append(newTask);
+taskList.append(createNewTaskListItem);
 
 function createNewTaskListItem() {
   const taskListItem = document.createElement("li");
@@ -19,9 +19,12 @@ function createNewTaskListItem() {
 
   const input = document.createElement("input");
   input.className = "task-item__checkbox";
+  input.setAttribute("type", "checkbox");
+  input.setAttribute("name", "tasks");
 
   const span = document.createElement("span");
   span.className = "task-item__text";
+  span.innerText = "Joggen abends 20km";
 
   label.append(input);
   label.append(span);
