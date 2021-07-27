@@ -1,7 +1,3 @@
-.task-item__label {
-  position: relative;
-}
-
 .task-item__text {
   font-size: 1.55rem;
   color: var(--fc-text-primary);
