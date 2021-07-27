@@ -8,39 +8,37 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <header>
-      <button aria-label="show menu" class="icon">
+    <main class="container">
+      <button aria-label="show menu" class="icon menuButton">
         <img src="./src/assets/burger.svg" alt=".." />
       </button>
-      <h1>Tasks</h1>
-      <button aria-label="show notification" class="icon">
-        <img src="./src/assets/notif.svg" alt=".." />
-      </button>
-    </header>
-    <main>
-      <nav>
-        <ul>
-          <li>
-            <a class="nav-item nav-item--active" href="#">Today</a>
-          </li>
-          <li>
-            <a class="nav-item" href="#">Tomorrow</a>
-          </li>
-          <li>
-            <a class="nav-item" href="#">This week</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="taskMenu">
+        <h1>Tasks</h1>
+        <button aria-label="show notification" class="icon notifyButton">
+          <img src="./src/assets/notif.svg" alt=".." />
+        </button>
+      </div>
+      <ul class="navList">
+        <li>
+          <a class="nav-item nav-item--active" href="#">Today</a>
+        </li>
+        <li>
+          <a class="nav-item" href="#">Tomorrow</a>
+        </li>
+        <li>
+          <a class="nav-item" href="#">This week</a>
+        </li>
+      </ul>
       <ul class="tasksList">
         <li class="tasksList__item">
           <label class="task-item">
-            <input class="task-item__checkbox" type="checkbox" />
+            <input class="task-item__checkbox" type="checkbox" checked />
             <span class="task-item__text">Book appoinment with Jack</span>
           </label>
         </li>
         <li class="tasksList__item">
           <label class="task-item">
-            <input class="task-item__checkbox" type="checkbox" checked />
+            <input class="task-item__checkbox" type="checkbox" />
             <span class="task-item__text">Play tennis with Jane </span>
           </label>
         </li>
@@ -69,5 +67,12 @@
         </li>
       </ul>
     </main>
+    <button class="button">
+      <img
+        class="button__plus"
+        src="src/assets/plus.svg"
+        alt="create new tesk"
+      />
+    </button>
   </body>
 </html>
