@@ -6,9 +6,8 @@ function sendAlert() {
 }
 
 const taskList = document.querySelector(".tasksList");
-const newTask = document.createElement("li");
-newTask.innerText = "Example task";
-taskList.append(createNewTaskListItem);
+
+taskList.appendChild(createNewTaskListItem());
 
 function createNewTaskListItem() {
   const taskListItem = document.createElement("li");
