@@ -177,6 +177,7 @@ body {
   padding-top: 3rem;
   width: 100%;
   padding-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .form__form-control input:focus {
@@ -250,10 +251,6 @@ input[type="radio"] {
 
 input[type="radio"]:checked + span {
   color: rgb(254, 71, 117);
-}
-
-input [type="text"] {
-  font-size: 1rem;
 }
 
 .addTask-container {
