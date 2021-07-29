@@ -1,14 +1,31 @@
 const taskList = document.querySelector(".tasksList");
 
-const newTaskObj = {
-  title: "Listen to music",
-  date: "tomorrow",
-  isDone: true,
-};
+const tasks = [
+  {
+    title: "Book appoinment with Jack",
+    date: "tomorrow",
+    isDone: true,
+  },
+  {
+    title: "Play tennis with Jane ",
+    date: "tomorrow",
+    isDone: true,
+  },
+  {
+    title: "Cook delicious dinner",
+    date: "tomorrow",
+    isDone: false,
+  },
+  {
+    title: "Go to cinema with the whole family",
+    date: "tomorrow",
+    isDone: false,
+  },
+];
 
-const taskOne = createNewTaskListItem(newTaskObj);
+const tasksArr = tasks.map((task) => createNewTaskListItem(task));
 
-taskList.append(taskOne);
+taskList.append(...tasksArr);
 
 function createNewTaskListItem(task) {
   const taskListItem = document.createElement("li");
