@@ -1,8 +1,10 @@
+import { saveTasksToLocalStorage } from "./utils/localStorage.js";
+import { getTasksFromLocalStorage } from "./utils/localStorage.js";
 const form = document.querySelector(".form");
 const input = document.querySelector('input[type="text"]');
-const checkedRadio = document.querySelector('input[type="radio"]:checked');
 
 form.onsubmit = function (event) {
+  const checkedRadio = document.querySelector('input[type="radio"]:checked');
   event.preventDefault();
   const newTaskObj = {
     title: "",
@@ -10,9 +12,14 @@ form.onsubmit = function (event) {
     isDone: false,
   };
   newTaskObj.title = input.value;
+
   newTaskObj.date = checkedRadio.value;
-  console.log(
-    `Input value ${newTaskObj.title} und 
-${newTaskObj.date}`
-  );
+
+  const oldTask = getTasksFromLocalStorage("tasks", []);
+
+  const tasksArr = [...oldTask, newTaskObj];
+
+  saveTasksToLocalStorage("tasks", tasksArr);
+
+  location.href = "/";
 };

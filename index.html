@@ -20,24 +20,50 @@
       </div>
       <ul class="navList">
         <li>
-          <a class="nav-item nav-item--active" href="#">Today</a>
+          <label class="dateSelect">
+            <input
+              class="dateSelect__input"
+              type="radio"
+              name="dateSelector"
+              value="today"
+            />
+            <span class="task-item__text">Today</span>
+          </label>
         </li>
         <li>
-          <a class="nav-item" href="#">Tomorrow</a>
+          <label class="dateSelect">
+            <input
+              class="dateSelect__input"
+              type="radio"
+              name="dateSelector"
+              value="tomorrow"
+            />
+            <span class="task-item__text">Tomorrow</span>
+          </label>
         </li>
         <li>
-          <a class="nav-item" href="#">This week</a>
+          <label class="dateSelect">
+            <input
+              class="dateSelect__input"
+              type="radio"
+              name="dateSelector"
+              value="this week"
+            />
+            <span class="task-item__text">This week</span>
+          </label>
         </li>
       </ul>
       <ul class="tasksList"></ul>
     </main>
-    <button class="button">
-      <img
-        class="button__plus"
-        src="src/assets/plus.svg"
-        alt="create new tesk"
-      />
-    </button>
-    <script src="index.js"></script>
+    <a href="new-task.html">
+      <button class="button">
+        <img
+          class="button__plus"
+          src="src/assets/plus.svg"
+          alt="create new tesk"
+        />
+      </button>
+    </a>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

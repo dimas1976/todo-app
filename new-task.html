@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>New Task</title>
-    <script src="/new.js" defer="true"></script>
   </head>
   <body>
     <div class="addTask-container">
@@ -28,13 +27,14 @@
               <span>Tomorrow</span>
             </label>
             <label>
-              <input type="radio" value="selectDate" name="when" />
-              <span>Select Date</span>
+              <input type="radio" value="this week" name="when" />
+              <span>This Week</span>
             </label>
           </div>
         </fieldset>
         <button class="form__btn form__btn--red" type="submit">Add Task</button>
       </form>
     </div>
+    <script type="module" src="/new.js" defer="true"></script>
   </body>
 </html>

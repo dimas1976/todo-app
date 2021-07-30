@@ -1,29 +1,11 @@
-const taskList = document.querySelector(".tasksList");
+import { getTasksFromLocalStorage } from "./utils/localStorage.js";
 
-const tasks = [
-  {
-    title: "Book appoinment with Jack",
-    date: "tomorrow",
-    isDone: true,
-  },
-  {
-    title: "Play tennis with Jane ",
-    date: "tomorrow",
-    isDone: true,
-  },
-  {
-    title: "Cook delicious dinner",
-    date: "tomorrow",
-    isDone: false,
-  },
-  {
-    title: "Go to cinema with the whole family",
-    date: "tomorrow",
-    isDone: false,
-  },
-];
+let taskList = document.querySelector(".tasksList");
 
-const tasksArr = tasks.map((task) => createNewTaskListItem(task));
+const tasks = getTasksFromLocalStorage("tasks", []);
+
+let tasksArr = tasks.map((task) => createNewTaskListItem(task));
+console.log(tasksArr);
 
 taskList.append(...tasksArr);
 
@@ -50,3 +32,16 @@ function createNewTaskListItem(task) {
 
   return taskListItem;
 }
+
+function onClickFilter(date) {
+  const filteredTasks = tasks.filter((task) => task.date === date);
+  tasksArr = filteredTasks.map((task) => createNewTaskListItem(task));
+  taskList.innerHTML = "";
+  taskList.append(...tasksArr);
+}
+
+const radios = document.querySelectorAll(".dateSelect__input");
+
+radios.forEach((radio) => {
+  radio.onclick = () => onClickFilter(radio.value);
+});
