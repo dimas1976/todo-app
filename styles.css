@@ -78,7 +78,7 @@ body {
   color: var(--fc-primary);
 }
 .task-item__text {
-  font-size: 1.55rem;
+  /* font-size: 1.55rem; */
   color: var(--fc-text-primary);
 }
 .task-item__checkbox[type="checkbox"]:checked + .task-item__text {
