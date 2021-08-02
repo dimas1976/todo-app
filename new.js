@@ -1,25 +1,28 @@
-import { saveTasksToLocalStorage } from "./utils/localStorage.js";
-import { getTasksFromLocalStorage } from "./utils/localStorage.js";
+import {
+  stringifyJSONToLocalStorage,
+  parseJSONFromLocalStorage,
+} from "./utils/localStorage.js";
+
 const form = document.querySelector(".form");
 const input = document.querySelector('input[type="text"]');
 
 form.onsubmit = function (event) {
   const checkedRadio = document.querySelector('input[type="radio"]:checked');
   event.preventDefault();
-  const newTaskObj = {
+  const newTask = {
     title: "",
     date: "",
     isDone: false,
   };
-  newTaskObj.title = input.value;
+  newTask.title = input.value;
 
-  newTaskObj.date = checkedRadio.value;
+  newTask.date = checkedRadio.value;
 
-  const oldTask = getTasksFromLocalStorage("tasks", []);
+  const oldTasks = parseJSONFromLocalStorage("tasks", []);
 
-  const tasksArr = [...oldTask, newTaskObj];
+  const newTasks = [...oldTasks, newTask];
 
-  saveTasksToLocalStorage("tasks", tasksArr);
+  stringifyJSONToLocalStorage("tasks", newTasks);
 
   location.href = "/";
 };
