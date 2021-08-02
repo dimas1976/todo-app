@@ -1,8 +1,11 @@
-import { getTasksFromLocalStorage } from "./utils/localStorage.js";
+import {
+  parseJSONFromLocalStorage,
+  stringifyJSONToLocalStorage,
+} from "./utils/localStorage.js";
 
 let taskList = document.querySelector(".tasksList");
 
-const tasks = getTasksFromLocalStorage("tasks", []);
+let tasks = parseJSONFromLocalStorage("tasks", []);
 
 let tasksArr = tasks.map((task) => createNewTaskListItem(task));
 console.log(tasksArr);
@@ -17,9 +20,11 @@ function createNewTaskListItem(task) {
   label.className = "task-item";
 
   const input = document.createElement("input");
+
   input.className = "task-item__checkbox";
   input.type = "checkbox";
   input.checked = task.isDone;
+  input.onclick = () => completeTask(task, input.checked);
   input.setAttribute("name", "tasks");
 
   const span = document.createElement("span");
@@ -45,3 +50,11 @@ const radios = document.querySelectorAll(".dateSelect__input");
 radios.forEach((radio) => {
   radio.onclick = () => onClickFilter(radio.value);
 });
+
+function completeTask(task, isDone) {
+  console.log("hallo");
+  tasks = parseJSONFromLocalStorage("tasks", []);
+  const completedTask = tasks.find((element) => element.title === task.title);
+  completedTask.isDone = isDone;
+  stringifyJSONToLocalStorage("tasks", tasks);
+}
